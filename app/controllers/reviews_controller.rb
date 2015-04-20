@@ -1,11 +1,13 @@
 class ReviewsController < ApplicationController
   before_filter :ensure_logged_in, only: [:create, :destroy]
 
-  def show
+  def show  
     @review = Review.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def create
+    @product = load_product
     @review = @product.reviews.build(review_params)
     @review.user = current_user
 
@@ -21,7 +23,7 @@ class ReviewsController < ApplicationController
     @review.destroy
   end
 
-  private
+private
   def review_params
     params.require(:review).permit(:comment, :product_id)
   end
@@ -29,4 +31,5 @@ class ReviewsController < ApplicationController
   def load_product
     @product = Product.find(params[:product_id])
   end
+
 end

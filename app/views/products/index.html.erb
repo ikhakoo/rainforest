@@ -2,9 +2,9 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p>Name: <%= product.name %> <br>
+  <p>Name: <%= link_to product.name, "/products/#{product.id}" %><br>
 		 Description: <%= product.description %> <br>
 		 Price($): <%= product.formatted_price %></p>
-		 <%= link_to product, "/products/#{product.id}" %>
+		 
 <% end %>
 </div>

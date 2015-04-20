@@ -2,8 +2,9 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p><%= product.name %> <br>
-  <%= product.formatted_price %></p>
-  <%= link_to product, "/products/#{product.id}" %>
+  <p>Name: <%= product.name %> <br>
+		 Description: <%= product.description %> <br>
+		 Price($): <%= product.formatted_price %></p>
+		 <%= link_to product, "/products/#{product.id}" %>
 <% end %>
 </div>

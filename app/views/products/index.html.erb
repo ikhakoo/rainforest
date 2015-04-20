@@ -5,6 +5,6 @@
   <p>Name: <%= link_to product.name, "/products/#{product.id}" %><br>
 		 Description: <%= product.description %> <br>
 		 Price($): <%= product.formatted_price %></p>
-		 
+		 <%= link_to 'Edit', "/products/#{product.id}/edit" %>
 <% end %>
 </div>

@@ -24,6 +24,9 @@
                      <li><%= link_to_unless_current('Products', products_path) {  link_to('Products', products_path, class: 'active') } %></li>
                   </ul>
                   <% if current_user %>
+                  <ul class="nav navbar-nav navbar-right">
+                  <li><%= link_to_unless_current('Profile', user_path(current_user.id)) {  link_to('Profile', user_path(current_user.id), class: 'active' ) } %></li>
+                  </ul>
                     <p class="navbar-text navbar-right">Signed in as <%= current_user.name %> <%= link_to "Log out", session_path("current"), :method => :delete %></p>
                   <% else %>
                     <%= form_tag "/sessions", method: "POST", class: "navbar-form navbar-right" do |f| %>
@@ -37,6 +40,7 @@
                         <%= submit_tag "Log in", class: "btn btn-default" %>            
 
                         <a href="/users/new">Sign Up</a>
+
                     <% end %>
                   <% end %>
                   </form>

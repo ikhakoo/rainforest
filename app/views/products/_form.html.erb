@@ -1,3 +1,5 @@
+<div class="well">
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -24,9 +26,10 @@
       <%= f.label :price_in_cents %><br />
       <%= f.number_field :price_in_cents %>
     </div>
+    <br>
     <div class="actions">
       <%= f.submit %>
     </div>
 <% end %>
-
+</div>
 

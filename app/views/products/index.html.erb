@@ -3,6 +3,7 @@
 <br>
 <br>
 <% @products.each do |product| %>
+<div class="well">
   <p>Name: <%= link_to product.name, "/products/#{product.id}" %><br>
 		 Description: <%= product.description %> <br>
 		 Price($): <%= product.formatted_price %></p>
@@ -22,5 +23,6 @@
 	</div>
 	<br>
 	<br>
+</div>
 <% end %>
 </div>

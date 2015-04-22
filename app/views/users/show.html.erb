@@ -2,8 +2,11 @@
 <br>
 
 <img src="/assets/defaultProfile.jpg" width="200" height="200" alt="Edit Entry" />
+<br>
+<p class="btn btn-default">
+	<%= link_to 'Edit Profile', "/users/#{current_user.id}/edit" %>
+</p>
+ 
 
-<%= user_path(current_user.id) %>
 
-<%= link_to edit_user, 'Edit' %>
 

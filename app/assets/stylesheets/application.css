@@ -14,3 +14,7 @@
  *= require_self
  *= require bootstrap.min
  */
+
+body {
+	background-color: #A9A9A9;
+}

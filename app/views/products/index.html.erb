@@ -1,6 +1,7 @@
 <h1>Products </h1>
-<%= link_to "New Product", "/products/new" %>
-
+<%= link_to "Add New Product", "/products/new" %>
+<br>
+<br>
 <% @products.each do |product| %>
   <p>Name: <%= link_to product.name, "/products/#{product.id}" %><br>
 		 Description: <%= product.description %> <br>

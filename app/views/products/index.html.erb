@@ -1,3 +1,4 @@
+<% if current_user %>
 <h1>Products </h1>
 <%= link_to "Add New Product", "/products/new" %>
 <br>
@@ -24,5 +25,10 @@
 	<br>
 	<br>
 </div>
+<% end %>
+<% else %>
+	<script type="text/javascript">
+		window.location.href="/users/new"
+	</script>
 <% end %>
 </div>

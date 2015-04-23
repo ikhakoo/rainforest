@@ -1,13 +1,13 @@
 <br>
 <br>
-<p>Name: <%= @product.name %> <br>
+<div class="well">
+<p>Product: <%= @product.name %> <br>
   Price: $<%= @product.formatted_price %></p>
 
 <%= link_to 'Back', products_path %>
 
 <% if current_user %>
   <h4>New Review</h4>
-
   <%= form_for([@product, @review]) do |f| %>
     <% if @review.errors.any? %>
       <div id="error_explanation">
@@ -27,6 +27,7 @@
     </div>
     <div class="actions">
       <%= f.submit %>
+    </div>
     </div>
   <% end %>
 

@@ -22,6 +22,14 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> <%= current_user.created_at.to_formatted_s(:long_ordinal)  %></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Updated</strong></span> <%= current_user.updated_at.to_formatted_s(:long_ordinal)  %></li>         
             </ul>
+
+            <ul class="list-group">
+                <li class="list-group-item text-muted" contenteditable="false">Activity</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Products</strong></span> <%= current_user.products.count %></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Reviews</strong></span> <%= current_user.reviews.count %></li>       
+            </ul>
+
+
         </div>
         <!--/col-1-->
         <div class="col-sm-9" contenteditable="false" style="">

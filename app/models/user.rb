@@ -3,5 +3,5 @@ class User < ActiveRecord::Base
 	validates :name, presence: true
 	has_many :reviews
   has_many :products, through: :reviews
-  has_many :products
+  has_many :products, foreign_key: 'created_by_id'
 end

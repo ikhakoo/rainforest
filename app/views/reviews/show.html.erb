@@ -4,12 +4,12 @@
   <p>Reviews for <%= @product.name %></p>
 
   <% @product.reviews.each do |review| %>
-    <p>
+    <li><p>
       <%= review.comment %>
       <br>
       <% if review.user != nil %>
         <em> by <%= review.user.email %></em>
-        Added on: <%= review.created_at.to_formatted_s(:long_ordinal) %>
+        Added on: <%= review.created_at.to_formatted_s(:long_ordinal) %> </li>
       <% end %>
     </p>
   <% end %>

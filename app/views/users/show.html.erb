@@ -21,9 +21,9 @@
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> <%= current_user.created_at %></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Updated</strong></span> <%= current_user.updated_at %></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Full name</strong></span> <%= current_user.name %></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> <%= current_user.created_at.to_formatted_s(:long_ordinal)  %></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Updated</strong></span> <%= current_user.updated_at.to_formatted_s(:long_ordinal)  %></li>         
             </ul>
         </div>
         <!--/col-3-->
@@ -34,6 +34,7 @@
                     
                 </div>
             </div>
+            </div>
            <div class="col-sm-9" contenteditable="false" style="">
             <div class="panel panel-default">
                 <div class="panel-heading">My Reviews</div>
@@ -42,7 +43,7 @@
                        <% if review.user != nil %> 
                          Product: <%= review.product.name %><br>
                          Comment: <%= review.comment %><br>
-                         Added on: <%= review.created_at %><br>
+                         Added on: <%= review.created_at.to_formatted_s(:long_ordinal)  %><br>
                        <% end %>
                      <hr class="">
               </div>
@@ -255,7 +256,7 @@
         
 	
 	<script src="/plugins/bootstrap-pager.js"></script>
-</div>
+
  
 
 

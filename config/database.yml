@@ -22,5 +22,5 @@ test:
 
 production:
   adapter: postgresql
-	database: rainforest
-	host: localhost
+  database: rainforest
+  host: localhost

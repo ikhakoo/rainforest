@@ -1,16 +1,15 @@
-<h3>Reviews</h3>
-
+<h3>Reviews for <%= @product.name %></h3>
 <div class="well">
-  <p>Reviews for <%= @product.name %></p>
 
-  <% @product.reviews.each do |review| %>
-    <li><p>
-      <%= review.comment %>
-      <br>
-      <% if review.user != nil %>
-        <em> by <%= review.user.email %></em>
-        Added on: <%= review.created_at.to_formatted_s(:long_ordinal) %> </li>
-      <% end %>
-    </p>
-  <% end %>
+<% @product.reviews.each do |review| %>
+  <li><p>
+    <%= review.comment %>
+    <br>
+    <% if review.user != nil %>
+      <em> by <%= review.user.email %></em>
+      Added on: <%= review.created_at.to_formatted_s(:long_ordinal) %>
+    <% end %>
+  </p></li>
+  <hr>
+<% end %>
 </div>

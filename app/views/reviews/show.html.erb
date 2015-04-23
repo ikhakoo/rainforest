@@ -1,5 +1,6 @@
- <h3>Reviews</h3>
+<h3>Reviews</h3>
 
+<div class="well">
   <p>Reviews for <%= @product.name %></p>
 
   <% @product.reviews.each do |review| %>
@@ -12,3 +13,4 @@
       <% end %>
     </p>
   <% end %>
+</div>

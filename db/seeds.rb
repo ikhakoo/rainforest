@@ -7,3 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+# 100.times do 
+#     Product.create!(
+#         name: Faker::Commerce.product_name,
+#         description: "testing with faker",
+#         price_in_cents: rand(100..1000000),
+#         )
+#    puts "|"
+# end

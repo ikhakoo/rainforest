@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
-<div class="well">
+<div class="thumbnail col-lg-4">
   <p>Name: <%= link_to product.name, "/products/#{product.id}" %><br>
 		 Description: <%= product.description %> <br>
 		 Price($): <%= product.formatted_price %></p>

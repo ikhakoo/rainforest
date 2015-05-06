@@ -17,9 +17,3 @@
    puts "|"
 end
 
- t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "name"
-    t.string   "about_me"

@@ -1,5 +1,6 @@
 <div id="review-list">
 <% @product.reviews.each do |review| %>
+  <% unless review.id.nil? %>
   <li><p>
     <div class="review">
     <p class="comment">
@@ -15,5 +16,6 @@
     <% end %>
   </p></li>
   <hr>
+  <% end %>
 <% end %>
 </div>

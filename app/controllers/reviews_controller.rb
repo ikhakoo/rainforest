@@ -6,6 +6,11 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
+  def new
+    @product = load_product
+    @review = @product.reviews.build
+  end
+
   def create
     @product = load_product
     @review = @product.reviews.build(review_params)

@@ -1,0 +1,19 @@
+<div id="review-list">
+<% @product.reviews.each do |review| %>
+  <li><p>
+    <div class="review">
+    <p class="comment">
+    <%= review.comment %>
+    </p>
+    <br>
+      <% if review.user != nil %>
+        <div class="poster">
+        <em> by <%= review.user.email %></em>
+        Added on: <%= review.created_at.to_formatted_s(:long_ordinal) %>
+        </div>
+      </div>
+    <% end %>
+  </p></li>
+  <hr>
+<% end %>
+</div>

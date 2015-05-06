@@ -9,10 +9,17 @@
 
 100.times do 
     Product.create!(
-        name: Faker::Commerce.product_name,
-        description: "testing with faker",
-        price_in_cents: rand(100..1000000),
-        created_by_id: 3,
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        password_digest: "test"
+        about_me: 3,
         )
    puts "|"
 end
+
+ t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.string   "about_me"

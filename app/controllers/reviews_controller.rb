@@ -12,9 +12,9 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to products_path, notice: 'Review created successfully'
+      format.html { render product_path(@product.id), notice: 'Review created successfully' }
     else
-      render 'products/show'
+      format.html { render 'products/show', alert: 'There was an error' }
     end
   end
 
